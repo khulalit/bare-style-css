@@ -1,0 +1,74 @@
+/* Dark Theme Colors */
+$color-primary: #c0c9d3;
+$color-primary-dark: #1a252f;
+$color-primary-light: #bbc7d3;
+$color-text: #ecf0f1;
+$color-heading: #bdc3c7;
+$color-danger: #e74c3c;
+$color-danger-dark: #c0392b;
+$color-success: #2ecc71;
+$color-neutral: #34495e;
+$color-hover: rgba(44, 62, 80, 0.8);
+$color-hover-light: rgba(44, 62, 80, 0.2);
+$color-highlight: rgba(46, 204, 113, 0.15);
+$color-border: #7f8c8d;
+
+/* Dark Theme Typography */
+$font-family: "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
+$font-mono: "Courier New", Courier, monospace;
+$font-size-base: 1rem;
+$font-size-small: 0.85rem;
+$font-size-large: 1.25rem;
+$font-size-h1: 2.2rem;
+$font-size-h2: 1.85rem;
+$font-size-h3: 1.65rem;
+$font-size-h4: 1.4rem;
+$font-size-h5: 1.1rem;
+$font-size-h6: 0.9rem;
+
+/* Dark Theme Spacing & Borders */
+$spacing-xxs: 0.3rem;
+$spacing-xs: 0.5rem;
+$spacing-sm: 0.7rem;
+$spacing-md: 1rem;
+$spacing-lg: 1.2rem;
+$spacing-xl: 1.8rem;
+$spacing-xxl: 2.5rem;
+
+$line-height-base: 1.4;
+$line-height-md: 1.6;
+
+$border-radius: 5px;
+$border-radius-lg: 12px;
+$border-width: 2px;
+$box-shadow-inset: inset 0 0 5px rgba(0, 0, 0, 0.2);
+$box-shadow-focus: 0 0 0 3px rgba(231, 76, 60, 0.5);
+
+$breakpoint-mobile: 768px;
+
+$grid-gap: 1rem;
+$grid-columns: 12;
+$column-span: 1;
+$grid-item-padding: 1rem;
+
+$table-width: 100%;
+$table-border-collapse: collapse;
+$table-margin: $spacing-md 0;
+
+$table-cell-padding: $spacing-xs $spacing-sm;
+$table-cell-border: 1px solid $color-border;
+
+$th-bg-color: $color-primary-dark;
+$th-text-color: $color-primary-light;
+$th-font-weight: 600;
+$th-font-size: $font-size-base;
+
+$td-font-size: $font-size-small;
+
+$row-hover-bg-color: rgba(255, 255, 255, 0.1);
+$row-hover-cursor: pointer;
+
+$caption-font-size: $font-size-small;
+$caption-font-weight: 600;
+$caption-padding: $spacing-sm 0;
+$caption-text-color: $color-primary-light;

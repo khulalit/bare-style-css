@@ -1,0 +1,254 @@
+@use "./themes" as *;
+@use "variables" as *;
+
+/* ========================
+   GLOBAL STYLES
+   ======================== */
+
+// Reset default margin and padding for all elements
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::selection {
+  background-color: $color-highlight;
+}
+
+// Header styles (h1 to h6)
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $color-heading;
+  font-weight: 500;
+}
+
+/* ========================
+   LINKS
+   ======================== */
+
+// Link styles
+a {
+  text-decoration: none;
+  color: $color-primary;
+
+  // Hover state for links
+  &:hover {
+    color: $color-hover;
+  }
+}
+
+/* ========================
+   LISTS
+   ======================== */
+
+// ul, ol, dl
+ul,
+dl,
+ol {
+  margin-block: $spacing-lg;
+}
+
+// Basic list item styles
+li {
+  list-style-type: none;
+  line-height: $line-height-md;
+}
+
+// Additional style for nested lists (indentation)
+li > ul {
+  padding-left: $spacing-lg; // Indentation for nested lists
+}
+
+/* ========================
+   SECTION
+   ======================== */
+
+section {
+  margin-block: $spacing-lg;
+  padding-block: $spacing-lg;
+}
+
+blockquote {
+  border-left: $border-width solid $color-primary;
+  margin-block: $spacing-lg;
+}
+
+/* ========================
+   PRE-TAG STYLES
+   ======================== */
+
+// Preformatted text styling
+// Styling for <pre> tag to display code or preformatted text
+pre {
+  font-family: $font-mono;
+  background-color: $color-neutral;
+  color: $color-text;
+  padding: $spacing-md;
+  border-radius: $border-radius;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  line-height: $line-height-base;
+}
+
+/* ========================
+     CODE-TAG STYLES
+     ======================== */
+
+// Inline code styling
+// Used for inline code snippets within text
+code {
+  font-family: $font-mono;
+  font-size: $font-size-small;
+  background-color: $color-neutral;
+  padding: $spacing-xxs $spacing-xs;
+  border-radius: $border-radius;
+  color: $color-primary;
+  word-wrap: break-word;
+}
+
+/* ========================
+    HR-TAG STYLES
+ ======================== */
+
+// Styling for the horizontal rule (hr) element
+hr {
+  background-color: $color-primary;
+  height: 4px;
+  border-radius: $border-radius-lg;
+}
+
+/* ========================
+   IMAGE STYLES
+   ======================== */
+
+/* Default image styling */
+img {
+  max-width: 100%; // Ensures responsiveness
+  height: auto; // Maintains aspect ratio
+  display: block; // Removes inline spacing issues
+  border-radius: $border-radius; // Applies rounded corners
+}
+
+/* Image inside a figure */
+figure {
+  margin: 0; // Remove default margin
+  text-align: center; // Center the content
+}
+
+figcaption {
+  font-size: $font-size-small; // Use small font size for captions
+  color: $color-text; // Caption text color
+  margin-top: $spacing-xs; // Add spacing between image and caption
+}
+
+/* Hover effect on images */
+img:hover {
+  opacity: 0.9; // Slight fade effect on hover
+  transition: opacity 0.3s ease-in-out; // Smooth transition effect
+}
+
+/* ========================
+   CUSTOM SCROLLBAR STYLES
+   ======================== */
+
+/* Webkit-based browsers (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+  width: $spacing-md; // Adjust width of scrollbar
+  height: $spacing-md; // Adjust height for horizontal scrollbar
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; // Track background
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $color-primary; // Scrollbar thumb color
+  border-radius: $border-radius-lg; // Rounded corners
+  border: $border-width solid transparent; // Space around the thumb
+  background-clip: content-box; // Creates space around the thumb
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: $color-hover; // Use hover color instead of function
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent; // Removes the corner
+}
+
+/* Firefox scrollbar styles */
+scrollbar {
+  width: $spacing-md;
+  height: $spacing-md;
+}
+
+scrollbar-thumb {
+  background-color: $color-primary;
+  border-radius: $border-radius-lg;
+}
+
+scrollbar-thumb:hover {
+  background-color: $color-hover;
+}
+
+/* ========================
+   DETAILS & SUMMARY STYLES
+   ======================== */
+
+details {
+  width: 100%;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  margin-block: $spacing-lg;
+  summary {
+    padding-block: $spacing-xs;
+    border-bottom: $border-width solid $color-primary-dark;
+    font-weight: 500;
+    cursor: pointer;
+    list-style: none; // Remove default arrow
+    position: relative;
+    transition: background-color 0.3s ease;
+    line-height: 1;
+
+    // Hide default marker and add custom icon
+    &::marker {
+      display: none;
+    }
+
+    &::after {
+      content: "▼"; // Custom arrow
+      position: absolute;
+      right: $spacing-lg;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: $font-size-small;
+      transition: transform 0.3s ease;
+    }
+  }
+
+  // Open state styles
+  &[open] summary::after {
+    transform: translateY(-50%) rotate(180deg); // Rotate arrow when open
+  }
+
+  // Content inside details
+  p {
+    margin: 0;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, opacity 0.3s ease, padding 0.3s ease;
+  }
+
+  &[open] p {
+    max-height: 200px; // Adjust based on content
+    opacity: 1;
+    padding: $spacing-lg;
+  }
+}

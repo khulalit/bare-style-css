@@ -1,0 +1,105 @@
+@use "./themes" as *;
+@use "variables" as *;
+
+/* ========================
+   FORM STYLES
+   ======================== */
+
+/* Base form styles */
+form {
+  margin: 0 auto;
+  padding-block: $spacing-lg;
+}
+
+/* ========================
+   INPUT FIELD STYLES
+   ======================== */
+
+input {
+  width: 100%;
+  padding: $spacing-sm;
+  margin-bottom: $spacing-lg;
+  border: $border-width solid $color-primary;
+  font-size: $font-size-base;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+
+  /* Focus state */
+  &:focus {
+    outline: 0;
+    border-color: $color-primary-dark;
+    box-shadow: $box-shadow-focus;
+  }
+
+  /* Error state */
+  &:invalid {
+    border-color: $color-danger;
+
+    &:focus {
+      border-color: $color-danger-dark;
+      box-shadow: 0 0 0 3px $color-hover-light;
+    }
+  }
+
+  /* Disabled state */
+  &:disabled {
+    background-color: $color-neutral;
+    border-color: $color-border;
+    cursor: not-allowed;
+  }
+
+  /* Placeholder text */
+  &::placeholder {
+    color: $color-text;
+  }
+}
+
+/* ========================
+   RADIO & CHECKBOX STYLES
+   ======================== */
+
+input[type="radio"],
+input[type="checkbox"] {
+  width: fit-content;
+  accent-color: $color-primary; // Uses theme color
+}
+
+/* Error message styles */
+input:invalid + span {
+  display: block;
+  color: $color-danger;
+  font-size: $font-size-small;
+  margin-top: -$spacing-md;
+  margin-bottom: $spacing-lg;
+}
+
+/* ========================
+   LABEL STYLES
+   ======================== */
+
+label {
+  display: block;
+  margin-bottom: $spacing-sm;
+  font-weight: $th-font-weight;
+}
+
+/* ========================
+   BUTTON STYLES
+   ======================== */
+
+button[type="submit"] {
+  border: none;
+  background-color: $color-primary;
+  color: $th-text-color;
+  padding: $spacing-xs $spacing-lg;
+  cursor: pointer;
+  border-radius: $border-radius;
+
+  &:hover {
+    background-color: $color-hover;
+  }
+
+  &:disabled {
+    background-color: $color-border;
+    cursor: not-allowed;
+  }
+}

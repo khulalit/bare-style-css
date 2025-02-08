@@ -1,0 +1,42 @@
+@use "./themes" as *;
+@use "variables" as *;
+
+/* ========================
+   LAYOUT CONTAINERS
+   ======================== */
+
+// General container setup for content alignment and size
+*[container] {
+  max-width: $size-md;
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+
+/* ========================
+   GRID CONTAINERS
+   ======================== */
+
+// Base grid container with variables for gap and column setup
+[grid] {
+  display: grid;
+  gap: $grid-gap;
+  grid-template-columns: repeat($grid-columns, 1fr); // 12-column grid system
+}
+
+// Column styles with dynamic span using a loop for cleaner code
+@for $i from 1 through $grid-columns {
+  [col-#{$i}] {
+    grid-column: span #{$i};
+  }
+}
+
+// Responsive Design: Stack columns on smaller screens
+@media (max-width: 768px) {
+  // Apply 12 column span for all columns on small screens (Grid and Flex)
+  @for $i from 1 through $grid-columns {
+    [col-#{$i}] {
+      grid-column: span 12;
+      flex: 12;
+    }
+  }
+}

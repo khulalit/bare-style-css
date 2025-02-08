@@ -1,0 +1,91 @@
+@use "./themes" as *;
+// // 🎨 Colors
+// $color-primary: colors.$color-primary;
+// $color-primary-dark: colors.$color-primary-dark;
+// $color-primary-light: colors.$color-primary-light;
+// $color-text: colors.$color-text;
+// $color-heading: colors.$color-heading;
+// $color-danger: colors.$color-danger;
+// $color-danger-dark: colors.$color-danger;
+// $color-success: colors.$color-success;
+// $color-neutral: colors.$color-neutral;
+// $color-hover: colors.$color-hover;
+// $color-hover-light: colors.$color-hover-light;
+// $color-highlight: colors.$color-highlight;
+// $color-border: colors.$color-border;
+
+// 🖋 Typography
+$font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+$font-mono: "Courier New", Courier, monospace;
+$font-size-base: 1rem;
+$font-size-small: 0.85rem;
+$font-size-large: 1.25rem;
+
+// Typography Variables
+$font-size-h1: 2rem; // Font size for h1
+$font-size-h2: 1.75rem; // Font size for h2
+$font-size-h3: 1.5rem; // Font size for h3
+$font-size-h4: 1.25rem; // Font size for h4
+$font-size-h5: 1rem; // Font size for h5
+$font-size-h6: 0.85rem; // Font size for h6
+
+// 📏 Spacing
+$spacing-xxs: 0.2rem;
+$spacing-xs: 0.4rem;
+$spacing-sm: 0.5rem;
+$spacing-md: 0.75rem;
+$spacing-lg: 1rem;
+$spacing-xl: 1.5rem;
+$spacing-xxl: 2rem;
+
+// Line-height
+$line-height-base: 1.25;
+$line-height-md: 1.5;
+
+// Sizes
+$size-md: 640px;
+
+// 🏗 Borders & Effects
+$border-radius: 4px;
+$border-radius-lg: 10px;
+$border-width: 2px;
+$box-shadow-inset: inset 0 0 5px rgba(0, 0, 0, 0.1);
+$box-shadow-focus: 0 0 0 3px rgba(21, 128, 90, 0.555);
+
+// 📐 Breakpoints
+$breakpoint-mobile: 768px;
+
+// Grid layout variables
+$grid-gap: 1rem; // Space between columns
+$grid-columns: 12; // Number of columns in grid system
+$column-span: 1; // Default column span value
+$grid-item-padding: 1rem; // Padding for grid items
+
+/* Table layout variables */
+$table-width: 100%;
+$table-border-collapse: collapse;
+$table-margin: $spacing-md 0;
+
+/* Table cell padding and border variables */
+$table-cell-padding: $spacing-xs $spacing-sm;
+$table-cell-border: 1px solid $color-border;
+
+/* Header styles variables */
+$th-bg-color: $color-primary;
+$th-text-color: $color-primary-light;
+$th-font-weight: 500;
+$th-font-size: $font-size-base;
+
+/* Data cell styles variables */
+$td-font-size: $font-size-small;
+
+/* Hover effect variables */
+$row-hover-bg-color: $color-hover-light;
+$row-hover-cursor: pointer;
+
+/* Caption styles variables */
+$caption-font-size: $font-size-small;
+$caption-font-weight: 500;
+$caption-padding: $spacing-sm 0;
+$caption-text-color: $color-primary-dark;

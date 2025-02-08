@@ -1,0 +1,48 @@
+@use "../themes" as *;
+@use "../variables" as *;
+/* ========================
+   NAVIGATION STYLES
+   ======================== */
+
+nav {
+  ul {
+    display: flex;
+    gap: $spacing-xxl;
+
+    li {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 0.1rem;
+
+      &:hover {
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: 100%;
+          height: 2px;
+          background-color: $color-primary; // Primary theme color
+        }
+      }
+
+      a {
+        text-decoration: none;
+        font-weight: 500;
+        &:hover {
+          text-decoration: none;
+        }
+
+        &:target {
+          background-color: $color-primary; // Primary color for active state
+        }
+      }
+
+      span {
+        width: 1.2rem;
+        height: 1.2rem;
+      }
+    }
+  }
+}

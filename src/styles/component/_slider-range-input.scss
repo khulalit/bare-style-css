@@ -1,0 +1,58 @@
+@use "../themes" as *;
+@use "../variables" as *;
+
+$slider-color: $color-primary;
+$thumb-size: 20px;
+$track-height: 8px;
+$track-bg: #d3d3d3;
+
+input[type="range"] {
+  -webkit-appearance: none;
+  width: 100%;
+  height: $track-height;
+  background: $track-bg;
+  border-radius: 5px;
+  outline: none;
+  opacity: 0.9;
+  transition: opacity 0.2s;
+  border: none;
+  cursor: pointer;
+  &:hover {
+    opacity: 1;
+  }
+
+  // Webkit (Chrome, Safari)
+  &::-webkit-slider-runnable-track {
+    width: 100%;
+    height: $track-height;
+    background: $slider-color;
+    border-radius: 5px;
+  }
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: $thumb-size;
+    height: $thumb-size;
+    background: $slider-color;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-top: calc(-1 * (($thumb-size - $track-height) / 2));
+  }
+
+  // Mozilla (Firefox)
+  &::-moz-range-track {
+    width: 100%;
+    height: $track-height;
+    background: $slider-color;
+    border-radius: 5px;
+  }
+
+  &::-moz-range-thumb {
+    width: $thumb-size;
+    height: $thumb-size;
+    background: $slider-color;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+}

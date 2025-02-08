@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bare style css | Documentation | Demo</title>
+  </head>
+  <body>
+    <div container>
+      <h1>Bare Style Css</h1>
+      <hr>
+      <section><p>
+        Bare-style CSS is a lightweight CSS library that automatically applies
+        styles to standard HTML elements. It eliminates the need for users to
+        manually add CSS classes, enabling faster development with clean and
+        simple HTML.
+      </p>
+      <p>
+        Bare-style CSS is perfect for situations where speed and simplicity are
+        key. It's great for quick prototyping, educational projects, and static
+        websites, allowing developers to focus on content rather than styling.
+        It's also ideal for personal websites, internal tools, or dashboards,
+        where minimal custom styling is needed.
+      </p></section>
+    
+      <section>
+        <h1>Typography</h1>
+        <h1>h1</h1>
+        <h2>h2</h2>
+        <h2>h3</h2>
+        <h4>h4</h4>
+        <h5>h5</h5>
+        <h6>h6</h6>
+      </section>
+
+      <section>
+        <h2>Forms</h2>
+        <p>
+          Forms is a really important aspect of html. We offer accesible yet and
+          good looking forms with support for <code>:focus</code>,
+          <code>:invalid</code>, <code>:disabled</code>.
+        </p>
+        <form action="#" onsubmit="return false;">
+          <label for="label1">Label 1</label>
+          <input type="text" placeholder="placeholder" id="label1" />
+          <label for="label2">Label 2</label>
+          <input type="number" placeholder="placeholder" id="label2" />
+          <label for="label3">Label 3</label>
+          <input type="date" placeholder="placeholder" id="label3" />
+          <label for="label4">Label 4</label>
+          <input type="email" placeholder="placeholder" id="label4" />
+          <label for="label5">Label 5</label>
+          <input type="checkbox" placeholder="placeholder5" />
+          <label for="label6">Label 5</label>
+          <input type="radio" placeholder="placeholder7" id="label6" />
+          <input type="radio" placeholder="placeholder7" id="label6" />
+          <label for="label1">Label 1</label>
+          <input type="text" placeholder="placeholder" id="label1" disabled />
+          <input type="text" placeholder="placeholder" id="label1" invalid />
+          <input type="range" placeholder="placeholder" id="label1" invalid />
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+      <section>
+        <h2>Code and formatted text</h2>
+        <code>
+          <pre>
+        function helloWorld(id) {
+          document.getElementById("id").innerHTML = "Hello world";
+        }</pre
+          >
+        </code>
+      </section>
+
+      <section>
+        <h2>Tables</h2>
+        <p>
+          Bare-style css offers beautifully styled tables that ensure your data
+          is presented in a clean, readable format. With no extra effort, tables
+          will have a well-structured layout, providing a pleasant viewing
+          experience. The default table style ensures proper alignment, spacing,
+          and clarity, making it easy to display complex datasets without
+          needing additional custom styling. Below is an example of how your
+          table will look once you apply the base styles.
+        </p>
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Age</th>
+              <th>City</th>
+              <th>Country</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>John Doe</td>
+              <td>28</td>
+              <td>New York</td>
+              <td>USA</td>
+            </tr>
+            <tr>
+              <td>Jane Smith</td>
+              <td>34</td>
+              <td>London</td>
+              <td>UK</td>
+            </tr>
+            <tr>
+              <td>Emily Johnson</td>
+              <td>25</td>
+              <td>Paris</td>
+              <td>France</td>
+            </tr>
+            <tr>
+              <td>Michael Brown</td>
+              <td>40</td>
+              <td>Berlin</td>
+              <td>Germany</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section>
+        <h2>Inline formatted text</h2>
+        <p>
+          Inline formatted text is used to apply specific styles or emphasis to
+          a part of the text within a larger content block. This allows you to
+          highlight or change the appearance of individual words or phrases
+          without interrupting the flow of the surrounding text. Bare-style css provide easy and well themed formatted out of the box.
+        </p>
+        <p>Below are some examples of inline formatted text elements:</p>
+        <ul>
+          <li>
+            <strong>Bold text:</strong> Use the <code>&lt;strong&gt;</code> tag
+            to make text bold.
+          </li>
+          <li>
+            <em>Italic text:</em> The <code>&lt;em&gt;</code> tag is used for
+            italicizing text.
+          </li>
+          <li>
+            <u>Underlined text:</u> The <code>&lt;u&gt;</code> tag applies an
+            underline to the text.
+          </li>
+          <li>
+            <code>Code snippet:</code> Use the <code>&lt;code&gt;</code> tag to
+            format inline code.
+          </li>
+          <li>
+            <mark>Highlighted text:</mark> The <code>&lt;mark&gt;</code> tag is
+            used to highlight text.
+          </li>
+      </section>
+      <section>
+        <h2>Lists</h2>
+        <p>Bare-style css provide simple styled list.</p>
+        <ul>
+          <li>Item 1: Apples</li>
+          <li>Item 2: Bananas</li>
+          <li>Item 3: Cherries</li>
+          <li>Item 4: Dates</li>
+          <li>Item 5: Elderberries</li>
+          <li>Item 6: Figs</li>
+          <li>Item 7: Grapes</li>
+          <li>Item 8: Honeydew</li>
+          <li>Item 9: Ice Cream</li>
+          <li>Item 10: Jamboree</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Button Component Documentation</h2>
+
+        <h3>Default Button Style</h3>
+        <p>The default button style follows the primary theme of the library with a background color of <code>#3a6a59</code> and white text color.</p>
+        <button>Default Button</button>
+
+        <h3>Button Types</h3>
+        <p>Buttons are customizable based on their type. Below are examples for each button type:</p>
+
+        <h4>Primary Button</h4>
+        <p>The primary button style uses the primary theme colors for actions.</p>
+        <button primary>Primary Button</button>
+
+        <h4>Primary Outline Button</h4>
+        <p>The outline version of the primary button has a transparent background with a border.</p>
+        <button primary-outline>Primary Outline Button</button>
+
+        <h4>Danger Button</h4>
+        <p>The danger button style is used for destructive actions, such as delete.</p>
+        <button danger>Danger Button</button>
+
+        <h4>Success Button</h4>
+        <p>The success button style indicates positive actions like success or confirmation.</p>
+        <button success>Success Button</button>
+
+        <h4>Neutral Button</h4>
+        <p>The neutral button style is for less important actions.</p>
+        <button neutral>Neutral Button</button>
+
+        <h3>Button Sizes</h3>
+        <p>Buttons can be sized according to the design need. Below are examples for small, medium, and large buttons:</p>
+
+        <h4>Small Button</h4>
+        <button sm>Small Button</button>
+
+        <h4>Large Button</h4>
+        <button lg>Large Button</button>
+
+        <h3>Disabled Button</h3>
+        <p>Buttons can also be disabled to prevent interaction. Here’s an example of a disabled button:</p>
+        <button disabled>Disabled Button</button>
+
+        <h3>Button States</h3>
+        <p>Buttons change appearance when hovered and become disabled with reduced opacity.</p>
+        <ul>
+          <li><strong>Hover:</strong> Background color changes when the button is hovered.</li>
+          <li><strong>Disabled:</strong> Disabled buttons have reduced opacity and no hover effect.</li>
+        </ul>
+      </section>
+      <hr>
+      <section>
+        <h2>Nav bar Component</h2>
+        <p>Bare-style css provide easy to out of the box navbar.</p>
+        <nav>
+          <ul>
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </section>
+    </div>
+  </body>
+</html>

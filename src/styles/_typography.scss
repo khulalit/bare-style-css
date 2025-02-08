@@ -1,0 +1,159 @@
+@use "./themes" as *;
+@use "variables" as *;
+
+/* ========================
+   TYPOGRAPHY STYLES
+   ======================== */
+
+/* ========================
+   BODY TEXT SETTINGS
+   ======================== */
+
+// Body text styling
+// Set body font, text color, background color, and line-height
+body {
+  font-family: $font-family;
+  color: $color-text;
+  background-color: $color-neutral;
+  line-height: $line-height-base;
+}
+
+/* ========================
+   HEADER STYLES
+   ======================== */
+
+// h1: Main heading, largest text size
+h1 {
+  font-size: $font-size-h1;
+  margin-bottom: $spacing-lg;
+}
+
+// h2: Secondary heading, slightly smaller than h1
+h2 {
+  font-size: $font-size-h2;
+  margin-bottom: $spacing-md;
+}
+
+// h3: Tertiary heading, used for sub-sections
+h3 {
+  font-size: $font-size-h3;
+  margin-bottom: $spacing-md;
+}
+
+// h4: Fourth level heading, smaller for minor sections
+h4 {
+  font-size: $font-size-h4;
+  margin-bottom: $spacing-sm;
+}
+
+// h5: Fifth level heading, typically used for smaller text in sections
+h5 {
+  font-size: $font-size-h5;
+  margin-bottom: $spacing-xs;
+}
+
+// h6: Smallest heading, typically used for fine print or less prominent headings
+h6 {
+  font-size: $font-size-h6;
+  margin-bottom: $spacing-xxs;
+}
+
+/* ========================
+   PARAGRAPH STYLES
+   ======================== */
+
+// Standard paragraph text styling
+// Set font size for paragraphs and margin for spacing
+p {
+  font-size: $font-size-base;
+  margin-bottom: $spacing-md;
+}
+
+/* ========================
+   BLOCKQUOTE STYLES
+   ======================== */
+
+// Blockquote styling
+// Set background color, padding, and italicize text
+blockquote {
+  background-color: $color-primary-light;
+  padding: $spacing-lg;
+  font-style: italic;
+}
+
+/* ========================
+   A TAG STYLES
+   ======================== */
+a {
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+/* ========================
+   TEXT ELEMENT STYLES
+   ======================== */
+
+/* ========================
+   INLINE TEXT ELEMENTS
+   ======================== */
+
+address {
+  font-style: italic;
+  color: $color-text;
+}
+
+span {
+  display: inline;
+}
+
+strong,
+b {
+  font-weight: bold;
+}
+
+em,
+i {
+  font-style: italic;
+}
+
+mark {
+  background-color: $color-highlight;
+  color: $color-heading;
+  padding: $spacing-xs;
+  border-radius: $border-radius;
+}
+
+abbr {
+  text-decoration: none;
+  border-bottom: $border-width solid $color-border;
+  cursor: help;
+}
+
+small {
+  font-size: $font-size-small;
+}
+
+u {
+  text-decoration: underline;
+}
+
+del {
+  text-decoration: line-through;
+  color: $color-danger;
+}
+
+ins {
+  text-decoration: underline;
+  color: $color-success;
+}
+
+sub {
+  font-size: $font-size-small;
+  vertical-align: sub;
+}
+
+sup {
+  font-size: $font-size-small;
+  vertical-align: super;
+}

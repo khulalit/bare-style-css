@@ -1,0 +1,136 @@
+@use "../themes" as *;
+@use "../variables" as *;
+
+/* ========================
+   VARIABLES
+   ======================== */
+
+/* Primary Theme Colors */
+$color-primary: #3a6a59;
+$color-primary-hover: #2c5042; // Slightly darker than primary
+
+/* Danger (Error) Colors */
+$color-danger: #ff4d4d;
+$color-danger-hover: #cc0000; // Darker shade for hover
+
+/* Success Colors */
+$color-success: #4caf50;
+$color-success-hover: #388e3c; // Darker green for hover
+
+/* Neutral Colors */
+$color-neutral: #f1f1f1;
+$color-neutral-hover: #d9d9d9; // Slightly darker gray
+
+/* Text & Heading Colors */
+$color-heading: #333;
+$color-text: #555;
+
+/* Border & Background Colors */
+$border-color: #ccc;
+$border-radius: 4px;
+$border-width: 2px;
+
+/* Spacing */
+$spacing-sm: 0.4rem;
+$spacing-md: 0.6rem;
+$spacing-lg: 0.8rem;
+$spacing-xl: 1.2rem;
+$spacing-xxl: 1.5rem;
+
+/* Font Sizes */
+$font-size-small: 0.85rem;
+$font-size-base: 0.95rem;
+
+/* Transitions */
+$transition-default: background-color 0.3s ease, color 0.3s ease,
+  border-color 0.3s ease;
+
+/* ========================
+   BUTTON STYLES
+   ======================== */
+
+button {
+  border: none;
+  border-radius: $border-radius;
+  font-size: $font-size-base - 0.05rem; // Slightly smaller than base font
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease,
+    border-color 0.3s ease;
+  background-color: $color-primary;
+  color: white;
+  padding: $spacing-md $spacing-xl; // Default (md) size
+
+  &:hover {
+    background-color: $color-primary-hover; // Define in variables
+  }
+
+  // Size Variants
+  &[sm] {
+    padding: $spacing-sm $spacing-lg;
+    font-size: $font-size-small;
+  }
+
+  &[lg] {
+    padding: $spacing-lg $spacing-xxl;
+    font-size: $font-size-base;
+  }
+
+  // Primary button
+  &[primary] {
+    background-color: $color-primary;
+    color: white;
+
+    &:hover {
+      background-color: $color-primary-hover;
+    }
+  }
+
+  // Primary outline button
+  &[primary-outline] {
+    background-color: transparent;
+    border: $border-width solid $color-primary;
+    color: $color-primary;
+
+    &:hover {
+      background-color: $color-primary;
+      color: white;
+    }
+  }
+
+  // Danger button
+  &[danger] {
+    background-color: $color-danger;
+    color: white;
+
+    &:hover {
+      background-color: $color-danger-hover;
+    }
+  }
+
+  // Success button
+  &[success] {
+    background-color: $color-success;
+    color: white;
+
+    &:hover {
+      background-color: $color-success-hover;
+    }
+  }
+
+  // Neutral button
+  &[neutral] {
+    background-color: $color-neutral;
+    color: $color-heading;
+
+    &:hover {
+      background-color: $color-neutral-hover;
+    }
+  }
+
+  // Disabled state
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}

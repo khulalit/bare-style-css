@@ -1,0 +1,51 @@
+@use "./themes" as *;
+@use "variables" as *;
+
+/* ========================
+   TABLE STYLES
+   ======================== */
+
+/* ========================
+   TABLE ELEMENT STYLES
+   ======================== */
+
+table {
+  width: $table-width;
+  border-collapse: $table-border-collapse;
+  margin: $table-margin;
+}
+
+th,
+td {
+  text-align: left;
+  padding: $table-cell-padding;
+  border: $table-cell-border;
+}
+
+th {
+  background-color: $th-bg-color;
+  color: $th-text-color;
+  font-weight: $th-font-weight;
+  font-size: $th-font-size;
+}
+
+td {
+  font-size: $td-font-size;
+}
+
+tr:hover {
+  background-color: $row-hover-bg-color;
+  cursor: $row-hover-cursor;
+}
+
+table caption {
+  font-size: $caption-font-size;
+  font-weight: $caption-font-weight;
+  padding: $caption-padding;
+  color: $caption-text-color;
+}
+
+table th,
+table td {
+  outline: none;
+}
