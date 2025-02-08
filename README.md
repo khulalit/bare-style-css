@@ -14,7 +14,7 @@ Bare Style CSS is a minimal, no-class CSS library designed to help developers cr
 
 ### Using via CDN
 
-```<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/khulalit/bare-style-css@latest/dist/bare-style-css.css">
+```html <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/khulalit/bare-style-css@latest/dist/bare-style-css.css">
 
 ```
 
