@@ -4,18 +4,21 @@ Bare Style CSS is a minimal, no-class CSS library designed to help developers cr
 
 ## ✨ Features
 
-📦 No-Class Styling: Style your HTML elements without the need for extra CSS classes.
-🎨 Pre-styled Components: Includes beautiful buttons, forms, tables, and more.
-🌙 Theme Support: Easily switch between light, dark, golden, and blue-sky themes.
-⚡ Lightweight & Fast: Minimal CSS footprint for blazing-fast performance.
-🛠 Customizable: Built with SCSS for easy customization.
+- 📦 No-Class Styling: Style your HTML elements without the need for extra CSS classes.
+- 🎨 Pre-styled Components: Includes beautiful buttons, forms, tables, and more.
+- 🌙 Theme Support: Easily switch between light, dark, golden, and blue-sky themes.
+- ⚡ Lightweight & Fast: Minimal CSS footprint for blazing-fast performance.
+- 🛠 Customizable: Built with SCSS for easy customization.
 
 ## Getting Started
 
 ### Using via CDN
 
-```html <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/khulalit/bare-style-css@latest/dist/bare-style-css.css">
-
+```html
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/khulalit/bare-style-css@latest/dist/bare-style-css.css"
+/>
 ```
 
 ## Demo
